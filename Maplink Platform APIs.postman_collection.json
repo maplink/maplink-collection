@@ -1,6 +1,6 @@
 {
   "info": {
-    "_postman_id": "426946da-9665-49a1-a8f3-cd486afbed3f",
+    "_postman_id": "9c9195ba-8a52-44ab-9983-f55397cff352",
     "name": "Maplink Platform APIs",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "_exporter_id": "15639997"
@@ -245,7 +245,7 @@
               "raw": ""
             },
             "url": {
-              "raw": "{{baseUrl}}/restriction/v1/restrictionZones",
+              "raw": "{{baseUrl}}/restriction/v1/restrictionZones?page=0&pageSize=50",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -253,6 +253,16 @@
                 "restriction",
                 "v1",
                 "restrictionZones"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "pageSize",
+                  "value": "50"
+                }
               ]
             }
           },
@@ -820,7 +830,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"vehicleType\": \"TRUCK_WITH_FOUR_DOUBLE_AXLES\",\n    \"points\": [\n        {\n            \"siteId\": \"Point 1-Extrema\",\n            \"latitude\": -22.859246,\n            \"longitude\": -46.339289\n        },\n        {\n            \"siteId\": \"Point 2-Betim\",\n            \"latitude\": -19.985117,\n            \"longitude\": -44.202667\n        }\n    ],\n    \"turnByTurn\": {\n        \"language\": \"en\"\n    }\n}"
+              "raw": "{\n    \"points\": [\n        {\n            \"siteId\": \"Point 1-Extrema\",\n            \"latitude\": -22.859246,\n            \"longitude\": -46.339289\n        },\n        {\n            \"siteId\": \"Point 2-Betim\",\n            \"latitude\": -19.985117,\n            \"longitude\": -44.202667\n        }\n    ],\n    \"turnByTurn\": {\n        \"language\": \"en\"\n    }\n}"
             },
             "url": {
               "raw": "{{baseUrl}}/trip/v2/calculations?pointsMode=polyline",
@@ -853,7 +863,8 @@
                   "postman.setGlobalVariable(\"tripjobid\", jsonData.id);"
                 ],
                 "type": "text/javascript",
-                "packages": {}
+                "packages": {},
+                "requests": {}
               }
             }
           ],
@@ -877,7 +888,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"calculationMode\": \"THE_FASTEST\",\n    \"vehicleType\": \"TRUCK_WITH_FOUR_DOUBLE_AXLES\",\n    \"points\": [\n        {\n            \"siteId\": \"1-JBS S/A - SFL\",\n            \"latitude\": -12.8351,\n            \"longitude\": -38.4219\n        },\n        {\n            \"siteId\": \"2-E DE CASA\",\n            \"latitude\": -12.85534,\n            \"longitude\": -38.28235\n        },\n        {\n            \"siteId\": \"3-MERCADINHO SILVA\",\n            \"latitude\": -12.8363,\n            \"longitude\": -38.26428\n        },\n        {\n            \"siteId\": \"4-MERCADO SAO JOSE\",\n            \"latitude\": -12.83114,\n            \"longitude\": -38.22942\n        },\n        {\n            \"siteId\": \"5-BEIJU COM TUDO DENTRO\",\n            \"latitude\": -12.77288,\n            \"longitude\": -38.17603\n        },\n        {\n            \"siteId\": \"6-FONSECA SUPERMERCADO\",\n            \"latitude\": -12.77253,\n            \"longitude\": -38.17833\n        },\n        {\n            \"siteId\": \"7-LARIKA NA GRELHA\",\n            \"latitude\": -12.763,\n            \"longitude\": -38.18114\n        },\n        {\n            \"siteId\": \"8-MIX BAHIA SUPERMERCADOS\",\n            \"latitude\": -12.70357,\n            \"longitude\": -38.13408\n        },\n        {\n            \"siteId\": \"9-MULTICARNES FRIGORIFICO\",\n            \"latitude\": -12.70191,\n            \"longitude\": -38.13226\n        },\n        {\n            \"siteId\": \"10-MERCADO SAO PEDRO\",\n            \"latitude\": -12.70111,\n            \"longitude\": -38.1314\n        },\n        {\n            \"siteId\": \"11-KARIENE SANTANA DE OLIVEIRA\",\n            \"latitude\": -12.68636,\n            \"longitude\": -38.11179\n        },\n        {\n            \"siteId\": \"12-ANA FLOR\",\n            \"latitude\": -12.68601,\n            \"longitude\": -38.1124\n        },\n        {\n            \"siteId\": \"13-WIG ALIMENTOS LTDA EPP\",\n            \"latitude\": -12.64982,\n            \"longitude\": -38.07102\n        },\n        {\n            \"siteId\": \"14-LOS PORRETONS BAR E RESTAURANTE\",\n            \"latitude\": -12.62813,\n            \"longitude\": -38.04581\n        },\n        {\n            \"siteId\": \"15-RESTAURANTE POLOMAR\",\n            \"latitude\": -12.52234,\n            \"longitude\": -37.99402\n        },\n        {\n            \"siteId\": \"16-SAUIPE SA\",\n            \"latitude\": -12.43956,\n            \"longitude\": -37.91966\n        },\n        {\n            \"siteId\": \"17-LULUCAS MIGUEZ REGIS RIBEIRO\",\n            \"latitude\": -12.39063,\n            \"longitude\": -37.88206\n        },\n        {\n            \"siteId\": \"18-FERNANDO GIAIMO E CIA LTDA ME\",\n            \"latitude\": -12.49197,\n            \"longitude\": -37.96207\n        },\n        {\n            \"siteId\": \"19-POUSADA TERRA DOCE\",\n            \"latitude\": -12.49565,\n            \"longitude\": -37.96247\n        },\n        {\n            \"siteId\": \"20-MERCADINHO SOARES\",\n            \"latitude\": -12.55247,\n            \"longitude\": -38.01445\n        },\n        {\n            \"siteId\": \"21-EMPORIO DU FORTE ARMAZEM E DISTRIBUIDORA\",\n            \"latitude\": -12.57611,\n            \"longitude\": -38.00834\n        },\n        {\n            \"siteId\": \"22-SETE PIZZAS NATURAL BAR LTDA ME\",\n            \"latitude\": -12.57748,\n            \"longitude\": -38.0045\n        },\n        {\n            \"siteId\": \"23-MRA COMERCIAL DE ALIMENTOS EIRELI - ME\",\n            \"latitude\": -12.64203,\n            \"longitude\": -38.08859\n        },\n        {\n            \"siteId\": \"24-JOVANIA RIBEIRO DE JESUS\",\n            \"latitude\": -12.64133,\n            \"longitude\": -38.08919\n        },\n        {\n            \"siteId\": \"25-BOUTIQUE DAS CARNES\",\n            \"latitude\": -12.64294,\n            \"longitude\": -38.09026\n        },\n        {\n            \"siteId\": \"26-VALCI GARCIA DE OLIVEIRA ME\",\n            \"latitude\": -12.65834,\n            \"longitude\": -38.08949\n        },\n        {\n            \"siteId\": \"27-MERCADO E DEPOSITO FONSECA\",\n            \"latitude\": -12.7672,\n            \"longitude\": -38.19029\n        },\n        {\n            \"siteId\": \"28-TCHE MANINHO CHURRASCARIA LTDA EPP\",\n            \"latitude\": -12.8444,\n            \"longitude\": -38.27895\n        },\n        {\n            \"siteId\": \"29-LN CONSULTORIA EM TECNOLOGIA\",\n            \"latitude\": -12.85695,\n            \"longitude\": -38.28782\n        },\n        {\n            \"siteId\": \"30-JBS S/A - SFL\",\n            \"latitude\": -12.8351,\n            \"longitude\": -38.4219\n        }\n    ]\n}"
+              "raw": "{\n    \"calculationMode\": \"THE_FASTEST\",\n    \"points\": [\n        {\n            \"siteId\": \"1-JBS S/A - SFL\",\n            \"latitude\": -12.8351,\n            \"longitude\": -38.4219\n        },\n        {\n            \"siteId\": \"2-E DE CASA\",\n            \"latitude\": -12.85534,\n            \"longitude\": -38.28235\n        },\n        {\n            \"siteId\": \"3-MERCADINHO SILVA\",\n            \"latitude\": -12.8363,\n            \"longitude\": -38.26428\n        },\n        {\n            \"siteId\": \"4-MERCADO SAO JOSE\",\n            \"latitude\": -12.83114,\n            \"longitude\": -38.22942\n        },\n        {\n            \"siteId\": \"5-BEIJU COM TUDO DENTRO\",\n            \"latitude\": -12.77288,\n            \"longitude\": -38.17603\n        },\n        {\n            \"siteId\": \"6-FONSECA SUPERMERCADO\",\n            \"latitude\": -12.77253,\n            \"longitude\": -38.17833\n        },\n        {\n            \"siteId\": \"7-LARIKA NA GRELHA\",\n            \"latitude\": -12.763,\n            \"longitude\": -38.18114\n        },\n        {\n            \"siteId\": \"8-MIX BAHIA SUPERMERCADOS\",\n            \"latitude\": -12.70357,\n            \"longitude\": -38.13408\n        },\n        {\n            \"siteId\": \"9-MULTICARNES FRIGORIFICO\",\n            \"latitude\": -12.70191,\n            \"longitude\": -38.13226\n        },\n        {\n            \"siteId\": \"10-MERCADO SAO PEDRO\",\n            \"latitude\": -12.70111,\n            \"longitude\": -38.1314\n        },\n        {\n            \"siteId\": \"11-KARIENE SANTANA DE OLIVEIRA\",\n            \"latitude\": -12.68636,\n            \"longitude\": -38.11179\n        },\n        {\n            \"siteId\": \"12-ANA FLOR\",\n            \"latitude\": -12.68601,\n            \"longitude\": -38.1124\n        },\n        {\n            \"siteId\": \"13-WIG ALIMENTOS LTDA EPP\",\n            \"latitude\": -12.64982,\n            \"longitude\": -38.07102\n        },\n        {\n            \"siteId\": \"14-LOS PORRETONS BAR E RESTAURANTE\",\n            \"latitude\": -12.62813,\n            \"longitude\": -38.04581\n        },\n        {\n            \"siteId\": \"15-RESTAURANTE POLOMAR\",\n            \"latitude\": -12.52234,\n            \"longitude\": -37.99402\n        },\n        {\n            \"siteId\": \"16-SAUIPE SA\",\n            \"latitude\": -12.43956,\n            \"longitude\": -37.91966\n        },\n        {\n            \"siteId\": \"17-LULUCAS MIGUEZ REGIS RIBEIRO\",\n            \"latitude\": -12.39063,\n            \"longitude\": -37.88206\n        },\n        {\n            \"siteId\": \"18-FERNANDO GIAIMO E CIA LTDA ME\",\n            \"latitude\": -12.49197,\n            \"longitude\": -37.96207\n        },\n        {\n            \"siteId\": \"19-POUSADA TERRA DOCE\",\n            \"latitude\": -12.49565,\n            \"longitude\": -37.96247\n        },\n        {\n            \"siteId\": \"20-MERCADINHO SOARES\",\n            \"latitude\": -12.55247,\n            \"longitude\": -38.01445\n        },\n        {\n            \"siteId\": \"21-EMPORIO DU FORTE ARMAZEM E DISTRIBUIDORA\",\n            \"latitude\": -12.57611,\n            \"longitude\": -38.00834\n        },\n        {\n            \"siteId\": \"22-SETE PIZZAS NATURAL BAR LTDA ME\",\n            \"latitude\": -12.57748,\n            \"longitude\": -38.0045\n        },\n        {\n            \"siteId\": \"23-MRA COMERCIAL DE ALIMENTOS EIRELI - ME\",\n            \"latitude\": -12.64203,\n            \"longitude\": -38.08859\n        },\n        {\n            \"siteId\": \"24-JOVANIA RIBEIRO DE JESUS\",\n            \"latitude\": -12.64133,\n            \"longitude\": -38.08919\n        },\n        {\n            \"siteId\": \"25-BOUTIQUE DAS CARNES\",\n            \"latitude\": -12.64294,\n            \"longitude\": -38.09026\n        },\n        {\n            \"siteId\": \"26-VALCI GARCIA DE OLIVEIRA ME\",\n            \"latitude\": -12.65834,\n            \"longitude\": -38.08949\n        },\n        {\n            \"siteId\": \"27-MERCADO E DEPOSITO FONSECA\",\n            \"latitude\": -12.7672,\n            \"longitude\": -38.19029\n        },\n        {\n            \"siteId\": \"28-TCHE MANINHO CHURRASCARIA LTDA EPP\",\n            \"latitude\": -12.8444,\n            \"longitude\": -38.27895\n        },\n        {\n            \"siteId\": \"29-LN CONSULTORIA EM TECNOLOGIA\",\n            \"latitude\": -12.85695,\n            \"longitude\": -38.28782\n        },\n        {\n            \"siteId\": \"30-JBS S/A - SFL\",\n            \"latitude\": -12.8351,\n            \"longitude\": -38.4219\n        }\n    ]\n}"
             },
             "url": {
               "raw": "{{baseUrl}}/trip/v1/problems",
@@ -904,7 +915,8 @@
                   "postman.setGlobalVariable(\"tripjobid\", jsonData.id);"
                 ],
                 "type": "text/javascript",
-                "packages": {}
+                "packages": {},
+                "requests": {}
               }
             }
           ],
@@ -928,7 +940,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"calculationMode\": \"THE_FASTEST\",\n    \"vehicleType\": \"TRUCK_WITH_FOUR_DOUBLE_AXLES\",\n    \"points\": [\n        {\n            \"latitude\": -23.597886134110535,\n            \"longitude\": -46.68828340700875,\n            \"siteId\": \"SP\"\n        },\n        {\n            \"latitude\": -22.904105827574107,\n            \"longitude\": -47.064011404092845,\n            \"siteId\": \"CAMPINAS\"\n        }\n    ],\n    \"toll\": {\n        \"vehicleType\": \"TRUCK_WITH_FOUR_DOUBLE_AXLES\"\n    }\n}"
+              "raw": "{\n    \"calculationMode\": \"THE_FASTEST\",\n    \"points\": [\n        {\n            \"latitude\": -23.597886134110535,\n            \"longitude\": -46.68828340700875,\n            \"siteId\": \"SP\"\n        },\n        {\n            \"latitude\": -22.904105827574107,\n            \"longitude\": -47.064011404092845,\n            \"siteId\": \"CAMPINAS\"\n        }\n    ],\n    \"toll\": {\n        \"vehicleType\": \"TRUCK_WITH_FOUR_DOUBLE_AXLES\"\n    }\n}"
             },
             "url": {
               "raw": "{{baseUrl}}/trip/v1/problems",
@@ -955,7 +967,8 @@
                   "postman.setGlobalVariable(\"tripjobid\", jsonData.id);"
                 ],
                 "type": "text/javascript",
-                "packages": {}
+                "packages": {},
+                "requests": {}
               }
             }
           ],
@@ -979,7 +992,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"calculationMode\": \"THE_FASTEST\",\n    \"vehicleType\": \"TRUCK_WITH_FOUR_DOUBLE_AXLES\",\n    \"points\": [\n        {\n            \"latitude\": -23.566329,\n            \"longitude\": -46.653690,\n            \"siteId\": \"SP\"\n        },\n        {\n            \"latitude\": -22.910884,\n            \"longitude\": -47.066027,\n            \"siteId\": \"CAMPINAS\"\n        }\n    ],\n    \"toll\": {\n        \"vehicleType\": \"TRUCK_WITH_FOUR_DOUBLE_AXLES\"\n    },\n    \"freight\": {\n        \"operationType\": [\n            \"D\"\n        ],\n        \"goodsType\": [\n            \"GRANEL_SOLIDO\"\n        ],\n        \"axis\": [\n            \"2\",\n            \"4\"\n        ],\n        \"roundTrip\": false,\n        \"backEmpty\": false,\n        \"otherCosts\": [\n            {\n                \"name\": \"ICMS\",\n                \"type\": \"PERCENT\",\n                \"value\": \"5\"\n            },\n            {\n                \"name\": \"Lucro\",\n                \"type\": \"PERCENT\",\n                \"value\": \"20\"\n            },\n            {\n                \"name\": \"TaxaFixa\",\n                \"type\": \"FIXED\",\n                \"value\": \"500\"\n            }\n        ],\n        \"date\": \"2022-04-02\"\n    }\n}"
+              "raw": "{\n    \"calculationMode\": \"THE_FASTEST\",\n    \"points\": [\n        {\n            \"latitude\": -23.566329,\n            \"longitude\": -46.653690,\n            \"siteId\": \"SP\"\n        },\n        {\n            \"latitude\": -22.910884,\n            \"longitude\": -47.066027,\n            \"siteId\": \"CAMPINAS\"\n        }\n    ],\n    \"toll\": {\n        \"vehicleType\": \"TRUCK_WITH_FOUR_DOUBLE_AXLES\"\n    },\n    \"freight\": {\n        \"operationType\": [\n            \"D\"\n        ],\n        \"goodsType\": [\n            \"GRANEL_SOLIDO\"\n        ],\n        \"axis\": [\n            \"4\"\n        ],\n        \"roundTrip\": false,\n        \"backEmpty\": false,\n        \"otherCosts\": [\n            {\n                \"name\": \"ICMS\",\n                \"type\": \"PERCENT\",\n                \"value\": \"5\"\n            },\n            {\n                \"name\": \"Lucro\",\n                \"type\": \"PERCENT\",\n                \"value\": \"20\"\n            },\n            {\n                \"name\": \"TaxaFixa\",\n                \"type\": \"FIXED\",\n                \"value\": \"500\"\n            }\n        ],\n        \"date\": \"2026-08-02\"\n    }\n}"
             },
             "url": {
               "raw": "{{baseUrl}}/trip/v1/problems",
@@ -1006,7 +1019,8 @@
                   "postman.setGlobalVariable(\"tripjobid\", jsonData.id);"
                 ],
                 "type": "text/javascript",
-                "packages": {}
+                "packages": {},
+                "requests": {}
               }
             }
           ],
@@ -1030,7 +1044,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"calculationMode\": \"THE_FASTEST\",\n  \"vehicleType\": \"TRUCK_WITH_FOUR_DOUBLE_AXLES\",\n  \"points\": [\n    {\n      \"latitude\": -20.46326264290572,\n      \"longitude\": -54.612264694166356,\n      \"siteId\": \"Point 1-Campo Grande-MS\"\n    },\n    {\n      \"latitude\": -22.907660731374474,\n      \"longitude\": -43.18378983504734,\n      \"siteId\": \"Point 2-Rio de Janeiro-RJ\"\n    }\n  ],\n  \"place\": {\n    \"categories\": [\n      \"FISCALIZACAO\"\n    ],\n    \"bufferRouteInMeters\": 10,\n    \"bufferStoppingPointsInMeters\": 20\n  }\n}"
+              "raw": "{\n  \"calculationMode\": \"THE_FASTEST\",\n  \"points\": [\n    {\n      \"latitude\": -20.46326264290572,\n      \"longitude\": -54.612264694166356,\n      \"siteId\": \"Point 1-Campo Grande-MS\"\n    },\n    {\n      \"latitude\": -22.907660731374474,\n      \"longitude\": -43.18378983504734,\n      \"siteId\": \"Point 2-Rio de Janeiro-RJ\"\n    }\n  ],\n  \"place\": {\n    \"categories\": [\n      \"FISCALIZACAO\"\n    ],\n    \"bufferRouteInMeters\": 10,\n    \"bufferStoppingPointsInMeters\": 20\n  }\n}"
             },
             "url": {
               "raw": "{{baseUrl}}/trip/v1/problems",
@@ -1057,7 +1071,8 @@
                   "postman.setGlobalVariable(\"tripjobid\", jsonData.id);"
                 ],
                 "type": "text/javascript",
-                "packages": {}
+                "packages": {},
+                "requests": {}
               }
             }
           ],
@@ -1081,7 +1096,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"expiryIn\": 1757786533000,\n    \"calculationMode\": \"THE_FASTEST\",\n    \"vehicleType\": \"TRUCK_WITH_FOUR_DOUBLE_AXLES\",\n    \"points\": [\n        {\n            \"latitude\": 9.094086569310107,\n            \"longitude\": -75.81947857299781,\n            \"siteId\": \"SP\"\n        },\n        {\n            \"latitude\": 9.087984387247685,\n            \"longitude\": -75.82050854124246,\n            \"siteId\": \"CAMPINAS\"\n        }\n    ],\n    \"toll\": {\n        \"vehicleType\": \"TRUCK_WITH_FOUR_DOUBLE_AXLES\"\n    }\n}"
+              "raw": "{\n    \"expiryIn\": 1757786533000,\n    \"calculationMode\": \"THE_FASTEST\",\n    \"points\": [\n        {\n            \"latitude\": 9.094086569310107,\n            \"longitude\": -75.81947857299781,\n            \"siteId\": \"SP\"\n        },\n        {\n            \"latitude\": 9.087984387247685,\n            \"longitude\": -75.82050854124246,\n            \"siteId\": \"CAMPINAS\"\n        }\n    ],\n    \"toll\": {\n        \"vehicleType\": \"TRUCK_WITH_FOUR_DOUBLE_AXLES\"\n    }\n}"
             },
             "url": {
               "raw": "{{baseUrl}}/trip/v1/problems",
@@ -1264,7 +1279,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"operationType\": [\r\n        \"A\"\r\n    ],\r\n    \"goodsType\": [\r\n        \"GRANEL_SOLIDO\"\r\n    ],\r\n    \"axis\": [\r\n        4\r\n    ],\r\n    \"roundTrip\": false,\r\n    \"backEmpty\": false,\r\n    \"distance\": 481,\r\n    \"otherCosts\": [\r\n        {\r\n            \"name\": \"ICMS\",\r\n            \"type\": \"PERCENT\",\r\n            \"value\": 5\r\n        },\r\n        {\r\n            \"name\": \"Taxa Fixa\",\r\n            \"type\": \"FIXED\",\r\n            \"value\": 200\r\n        }\r\n    ],\r\n    \"date\": \"2022-04-02\"\r\n}"
+              "raw": "{\r\n    \"operationType\": [\r\n        \"A\"\r\n    ],\r\n    \"goodsType\": [\r\n        \"GRANEL_SOLIDO\"\r\n    ],\r\n    \"axis\": [\r\n        4\r\n    ],\r\n    \"roundTrip\": false,\r\n    \"backEmpty\": false,\r\n    \"distance\": 481,\r\n    \"otherCosts\": [\r\n        {\r\n            \"name\": \"ICMS\",\r\n            \"type\": \"PERCENT\",\r\n            \"value\": 5\r\n        },\r\n        {\r\n            \"name\": \"Taxa Fixa\",\r\n            \"type\": \"FIXED\",\r\n            \"value\": 200\r\n        }\r\n    ],\r\n    \"date\": \"2026-08-02\"\r\n}"
             },
             "url": {
               "raw": "{{baseUrl}}/freight/v1/calculations",
