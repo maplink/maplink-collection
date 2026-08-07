@@ -1,6 +1,6 @@
 {
   "info": {
-    "_postman_id": "9c9195ba-8a52-44ab-9983-f55397cff352",
+    "_postman_id": "fa452e84-885d-4fb3-84e5-76e304353681",
     "name": "Maplink Platform APIs",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "_exporter_id": "15639997"
@@ -452,45 +452,6 @@
                 "geocode",
                 "v2",
                 "geocode"
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "Multi Geocode",
-          "request": {
-            "auth": {
-              "type": "bearer",
-              "bearer": [
-                {
-                  "key": "token",
-                  "value": "{{currentAccessToken}}",
-                  "type": "string"
-                }
-              ]
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "type": "text"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "[\n    {\n        \"id\": \"Address1\",\n        \"road\": \"Leopoldo Hess\",\n        \"number\": 75,\n        \"district\": \"São João\",\n        \"zipcode\": \"88304-260\",\n        \"city\": \"Itajai\",\n        \"state\": \"SC\"\n    },\n    {\n        \"id\": \"Address2\",\n        \"road\": \"Alameda Campinas\",\n        \"number\": 579,\n        \"zipcode\": \"01419-001\",\n        \"city\": \"São Paulo\",\n        \"state\": \"SP\"\n    }\n]"
-            },
-            "url": {
-              "raw": "{{baseUrl}}/geocode/v2/multi-geocode",
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "path": [
-                "geocode",
-                "v2",
-                "multi-geocode"
               ]
             }
           },
